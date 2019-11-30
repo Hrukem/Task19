@@ -1,0 +1,15 @@
+defmodule Sviser do
+@moduledoc false
+
+	def start do
+		children = 
+		[
+			%{
+				id: Superviser,
+				start: {Superviser, :start, []}
+			}
+		]
+
+		Supervisor.start_link(children, strategy: :one_for_one)
+	end
+end
