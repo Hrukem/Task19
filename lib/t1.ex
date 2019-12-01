@@ -5,8 +5,8 @@ defmodule T1 do
 		num = IO.gets("Input number: ")
 		send(:cnt, num)
 		receive do
-			result -> 
-							IO.puts("Result is #{result}")
+			res -> 
+							IO.puts("Result is #{res}")
 		end
 		i_o()
 	end
