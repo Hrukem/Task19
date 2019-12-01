@@ -7,11 +7,11 @@ defmodule T2 do
 			Process.register(pid, :iod)
 		else
 			receive do
-				num -> 
-									num = String.trim(num)
-									num = String.to_integer(num)
-									num = 100 / num
-									send(:iod, num)
+				msg -> 
+									str = String.trim(msg)
+									num = String.to_integer(str)
+									res = 100 / num
+									send(:iod, res)
 			end
 		end
 		count()
