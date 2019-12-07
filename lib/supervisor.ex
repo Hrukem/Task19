@@ -1,4 +1,5 @@
-defmodule Superviser do
+defmodule Super_visor do
+
 	def start do
 		children = 
 		[

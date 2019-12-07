@@ -1,15 +1,16 @@
-defmodule Sviser do
-@moduledoc false
+defmodule Supervisor do
 
 	def start do
 		children = 
 		[
 			%{
-				id: Superviser,
-				start: {Superviser, :start, []}
+				id: Count,
+				start: {Count, :count, []}
 			}
 		]
 
 		Supervisor.start_link(children, strategy: :one_for_one)
+		IO.puts("Start after fall")
+		start()
 	end
 end

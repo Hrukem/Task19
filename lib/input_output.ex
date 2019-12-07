@@ -1,4 +1,4 @@
-defmodule T1 do
+defmodule Input_output do
 @moduledoc false
 
 	def i_o() do

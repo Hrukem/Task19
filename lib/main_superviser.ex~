@@ -1,4 +1,4 @@
-defmodule Sviser do
+defmodule Main_superviser do
 @moduledoc false
 
 	def start do
@@ -10,7 +10,6 @@ defmodule Sviser do
 			}
 		]
 
-		IO.puts("start Svis")
 		Supervisor.start_link(children, strategy: :one_for_one)
 	end
 end

@@ -1,4 +1,4 @@
-defmodule T2 do
+defmodule Count do
 
 	def count() do
 		if Process.whereis(:iod) == nil do
